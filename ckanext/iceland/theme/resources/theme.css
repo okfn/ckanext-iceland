@@ -16,6 +16,11 @@ body {
   background-image: none;
   background-color: #f8f8f7;
 }
+@media (max-width: 767px) {
+  body {
+    background-image: url("../../../base/images/bg.png");
+  }
+}
 li {
   line-height: 1.4;
 }
@@ -107,6 +112,9 @@ button {
 }
 .account-masthead hgroup {
   padding-top: 15px;
+}
+.account-masthead hgroup a {
+  text-decoration: none;
 }
 .account-masthead hgroup img {
   height: 30px;
@@ -297,6 +305,7 @@ button {
 [role="main"],
 .main {
   background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
 }
 [role="main"] .strapline {
   text-align: center;
@@ -414,4 +423,14 @@ a.box:hover {
 .site-footer .attribution .ckan-footer-logo {
   height: 23px;
   background-size: contain;
+}
+@media (max-width: 767px) {
+  .site-footer {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .site-footer .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

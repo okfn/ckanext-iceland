@@ -55,6 +55,11 @@ body {
   background-image:none;
   background-color:@light;
 }
+@media (max-width: 767px) {
+  body {
+    background-image:url("../../../base/images/bg.png");
+  }
+}
 li {
   line-height:1.4;
 }
@@ -144,6 +149,9 @@ button {
   border-bottom:solid 10px @secondary;
   hgroup {
     padding-top:15px;
+    a {
+      text-decoration:none;
+    }
     img {
       height:30px;
     }
@@ -341,6 +349,7 @@ button {
 [role="main"],
 .main {
   background-color:#fff;
+  background-color:rgba(255,255,255,0);
 }
 
 [role="main"] .strapline {
@@ -461,5 +470,15 @@ a.box:hover {
   .attribution .ckan-footer-logo {
     height: 23px;
     background-size:contain;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    margin-left:-20px;
+    margin-right:-20px;
+    .container {
+      margin-left:20px;
+      margin-right:20px;
+    }
   }
 }
