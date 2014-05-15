@@ -1,5 +1,5 @@
 {% extends "page.html" %}
-{% set homepage_style = ( g.homepage_style or '1' ) %}
+{% set tags = h.get_facet_items_dict('tags', limit=4) %}
 
 {% block subtitle %}{{ _("Welcome") }}{% endblock %}
 
@@ -30,7 +30,6 @@
             </div>
           </div>
           <div class="row">
-            {% set tags = h.get_facet_items_dict('tags', limit=4) %}
             {% for tag in tags %}
             <div class="span3">
               <a class="box" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
