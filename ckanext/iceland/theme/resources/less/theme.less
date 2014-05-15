@@ -1,0 +1,451 @@
+//LESS Document
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic);
+
+//Variables
+@text: #3D3D3D;
+@medium-text: #5D5D5D;
+@light-text: #818181;
+@light: #F8F8F7;
+@medium: #E3E3E3;
+@dark: #C8C8C8;
+@primary: #005499;
+@tertiary: #FA3127;
+@secondary: #D3A032;
+@serif: 'PT Serif', Georgia, Times, "Times New Roman", serif;
+@sans:  "PT Sans", "Trebuchet MS", tahoma, sans-serif;
+
+//Mixins
+.font-size(@sizeValue) {
+  @remValue: (@sizeValue / 10);
+  @pxValue: @sizeValue;
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+.rounded(@radius: 3px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.box-sizing(@sizing: border-box) {
+  -ms-box-sizing: @sizing;
+  -moz-box-sizing: @sizing;
+  -webkit-box-sizing: @sizing;
+  box-sizing: @sizing;
+}
+
+
+/* Sets up the base 10 */
+html {
+  font-size: 62.5%;
+  overflow-x:hidden;
+}
+
+body {
+  color: @text;
+  font-family: @serif;
+  .font-size(17);
+  line-height:1.4;
+  background-image:none;
+  background-color:@light;
+}
+li {
+  line-height:1.4;
+}
+
+a,
+a:hover,
+a:focus {
+  color:@primary;
+}
+
+input, select, textarea {
+  font-family: @serif;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: @light;
+  border-color: @dark;
+  .box-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: @medium;
+  background-color:#fff;
+  .box-shadow(0 0 5px rgba(0, 0, 0, 0.1));
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  .rounded(0);
+  font-size:inherit;
+}
+
+button {
+  font-family: @sans;
+}
+
+
+.account-masthead {
+  background-image:none;
+  background-color:#fff;
+  color: @light-text;
+  font-family:@sans;
+  border-bottom:solid 10px @secondary;
+  hgroup {
+    padding-top:15px;
+    img {
+      height:30px;
+    }
+    .strapline {
+      color:@light-text;
+      font-weight:400;
+      text-transform:uppercase;
+      font-size:17px;
+      letter-spacing:1px;
+    }
+  }
+  .account {
+    .notifications a {
+      position:relative;
+      span {
+        background-color: @tertiary;
+        color:#fff;
+        .rounded(7px);
+        font-size: 10px;
+        padding: 1px;
+        position:absolute;
+        top:10px;
+        right:10px;
+        line-height: normal;
+        height:12px;
+        min-width:12px;
+        text-align:center;
+        display:none;
+      }
+    }
+    .notifications.notifications-important a span {
+      display:block;
+    }
+    ul li {
+      border-color:@medium;
+      a {
+        text-transform:uppercase;
+        color: @light-text;
+        .font-size(15);
+        font-weight: 400;
+        line-height: 25px;
+        padding: 15px;
+        i {
+          display:inline-block;
+          background-color:@light-text;
+          color:#fff;
+          width:25px;
+          height:25px;
+          line-height:25px;
+          text-align:center;
+          .rounded(50%);
+        }
+      }
+      a:hover {
+        background-color: #fff;
+        color: @primary;
+        i {
+          background-color:@primary;
+        }
+      }
+    }
+  }
+  .account.authed .image {
+    padding: 15px;
+    img {
+      .rounded(50%);
+      width:25px;
+      height:25px;
+      vertical-align: -8px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .account-masthead {
+    hgroup {
+      float:left;
+      .strapline {
+        display:none;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .account-masthead {
+    border-bottom-width:5px;
+    text-align:center;
+    hgroup {
+      position:relative;
+      z-index:1;
+      .logo {
+        img {
+          height:16px;
+          background-color:#fff;
+          padding-left:10px;
+          padding-right:10px;
+        }
+        .strapline {
+          margin:1px 0 5px 0;
+        }
+      }
+    }
+    hgroup:before {
+      background-color:@medium;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 50%;
+      margin-left: -140px;
+      position: absolute;
+      top: 29px;
+      width: 280px;
+      z-index: -1;
+    }
+    .account {
+      display:none;
+    }
+  }
+}
+
+
+.masthead {
+  text-align:center;
+  background-color:#fff;
+  .section {
+    float:none;
+  }
+  .site-search {
+    display: block;
+    margin:50px 0 10px 0;
+    .field {
+      display:inline-block;
+      width:100%;
+      max-width:724px;
+    }
+    input[type="text"] {
+      .box-sizing();
+      border-color: @dark;
+      height: 56px;
+      padding: 5px 130px 5px 28px;
+      margin:0;
+      font-size:20px;
+      font-style:italic;
+      width:100%;
+    }
+  }
+}
+.simple-input .field {
+  .btn-search {
+    background-color: @secondary;
+    color: #fff;
+    height: auto;
+    margin-top: 0;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom:0;
+    width: auto;
+    font-size:20px;
+    text-transform:uppercase;
+    i {
+      display:none;
+    }
+  }
+  .btn-search:hover {
+    color:#fff;
+    text-shadow: 0 0 1px darken(@secondary, 30%);
+  }
+}
+
+@media (max-width: 767px) {
+  .masthead {
+    .site-search {
+      margin-top:15px;
+      margin-bottom:15px;
+      .field {
+        max-width:400px;
+        .btn-search {
+          i {
+            display:block;
+          }
+          span {
+            display:none;
+          }
+        }
+      }
+      input[type="text"] {
+        height: 39px;
+        padding: 5px 60px 5px 12px;
+      }
+    }
+  }
+}
+
+[role="main"],
+.main {
+  background-color:#fff;
+}
+
+[role="main"] .strapline {
+  text-align:center;
+  font-family:@sans;
+  color:@medium-text;
+  .font-size(26);
+  text-transform:uppercase;
+  position:relative;
+  z-index:0;
+  span {
+    background-image:url("../../../base/images/bg.png");
+    padding:0 20px;
+  }
+}
+[role="main"] .strapline:before {
+  background-color:@dark;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  right:0;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  [role="main"] .strapline {
+    display:none;
+  }
+}
+
+
+.box {
+  display:block;
+  border-color:@dark;
+  .rounded(0);
+  .box-shadow(none);
+}
+a.box {
+  color:@medium-text;
+  font-family:@sans;
+  text-align:center;
+  padding:10px 20px;
+  text-transform:uppercase;
+}
+a.box:hover {
+  background-color:@secondary;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* Home */
+.homepage {
+  a.box {
+    word-wrap:break-word;
+  }
+}
+@media (max-width: 767px) {
+  .homepage {
+    [role="main"] {
+      margin-left:-21px;
+      margin-right:-21px;
+    }
+    a.box {
+      margin-top:-1px;
+      text-align:left;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .homepage [class*="span"] {
+    display:table;
+    margin-bottom:20px;
+    a.box {
+      height:110px;
+      vertical-align:middle;
+      display:table-cell;
+      max-width:0; /* behaves like 100% */
+    }
+  }
+}
+@media (min-width: 992px) {
+  .homepage [class*="span"] {
+    a.box {
+      height:150px;
+      .font-size(20);
+    }
+  }
+}
+
+.site-footer {
+  background-image:none;
+  background-color:@light;
+  color: @light-text;
+  border-top:solid 1px @medium;
+  a {
+    color: @light-text;
+  }
+  label,
+  small {
+    color: @light-text;
+  }
+  .attribution .ckan-footer-logo {
+    height: 23px;
+    background-size:contain;
+  }
+}
