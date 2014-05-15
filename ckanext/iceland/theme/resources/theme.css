@@ -328,6 +328,19 @@ button {
     display: none;
   }
 }
+.toolbar .breadcrumb {
+  font-family: "PT Sans", "Trebuchet MS", tahoma, sans-serif;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-size: 1.7rem;
+  color: #5d5d5d;
+}
+.toolbar .breadcrumb li:after {
+  content: " > ";
+}
+.toolbar .breadcrumb a {
+  color: #5d5d5d;
+}
 .box {
   display: block;
   border-color: #c8c8c8;
