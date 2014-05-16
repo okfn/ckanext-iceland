@@ -859,3 +859,21 @@ a.box:hover {
     margin-right: 20px;
   }
 }
+/* IE8 Hacks */
+html.ie .account-masthead hgroup {
+  width: 200px;
+  height: 35px;
+  position: absolute;
+  overflow: hidden;
+}
+html.ie .masthead .site-search .field {
+  float: left;
+}
+html.ie .masthead .site-search .field button {
+  right: -215px;
+}
+html.ie .attribution .ckan-footer-logo {
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/../../../base/images/ckan-logo-footer.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/../../../base/images/ckan-logo-footer.png', sizingMethod='scale')";
+}

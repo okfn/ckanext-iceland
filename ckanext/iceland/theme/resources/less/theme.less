@@ -945,3 +945,29 @@ a.box:hover {
     }
   }
 }
+
+
+/* IE8 Hacks */
+html.ie {
+  .account-masthead hgroup {
+    width:200px;
+    height:35px;
+    position:absolute;
+    overflow:hidden;
+  }
+  .masthead {
+    .site-search {
+      .field {
+        float:left;
+        button {
+          right:-215px;
+        }
+      }
+    }
+  }
+  .attribution .ckan-footer-logo {
+    background-image:none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/../../../base/images/ckan-logo-footer.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/../../../base/images/ckan-logo-footer.png', sizingMethod='scale')";
+  }
+}
