@@ -522,6 +522,44 @@ a.box:hover {
   }
 }
 
+.page-header {
+  background-color:#fff;
+  background-image:url("../../../base/images/bg.png");
+}
+
+.media-grid {
+  margin-left: -25px;
+  .media-item {
+    width:183px;
+  }
+}
+@media (max-width: 767px) {
+  .media-grid {
+    margin-left:-41px;
+    margin-right:-11px;
+    background-image:none;
+    background-color:#fff;
+    border:none;
+  }
+  article.module {
+    border:none;
+  }
+}
+
+
+.media-heading {
+  font-family:@sans;
+  font-weight:400;
+}
+
+.media-view .banner {
+  font-family:@sans;
+}
+.media-view:hover .banner,
+.media-view.hovered .banner {
+  background-color: @primary;
+}
+
 
 [role="main"] .page {
   padding-bottom:20px;
@@ -531,16 +569,40 @@ a.box:hover {
   border-top:solid 1px @dark;
   .module {
     border:none;
+    .page-header {
+      background-color:#fff;
+    }
   }
   .module-resource .actions {
     right: auto;
     top: auto;
+  }
+  .media-grid {
+    background-image:none;
+    background-color:#fff;
+    border:none;
+    margin-left:-15px;
+    margin-right:-15px;
+  }
+  .wide .media-item {
+    width: 194px;
   }
 }
 @media (max-width: 767px) {
   [role="main"] .page {
     margin-left:-21px;
     margin-right:-21px;
+  }
+  .fullwidth.page {
+    .wide {
+      .media-grid {
+        margin-left:-40px;
+        margin-right:-40px;
+        .media-item {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 @media (min-width: 768px) {
@@ -551,6 +613,7 @@ a.box:hover {
     }
   }
 }
+
 
 
 [role="main"],
@@ -819,21 +882,26 @@ a.box:hover {
   }
 }
 @media (max-width: 767px) {
+  .media-grid {
+    margin-top:0;
+    .media-item {
+      width: 100%;
+      margin-top:-1px;
+      padding-left:20px;
+      padding-right:50px;
+      .box-sizing();
+      .media-image {
+        display:none;
+      }
+    }
+  }
   .groups.page {
     .primary {
       .module {
         .module-content {
           .media-grid {
-            margin-top:0;
             .media-item {
               width: 100%;
-              margin-top:-1px;
-              padding-left:20px;
-              padding-right:50px;
-              .box-sizing();
-              .media-image {
-                display:none;
-              }
             }
           }
         }
@@ -842,6 +910,11 @@ a.box:hover {
   }
 }
 
+
+/* Add */
+.stages {
+  margin-top:-25px;
+}
 
 
 /* Footer */

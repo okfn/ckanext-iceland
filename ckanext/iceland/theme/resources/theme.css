@@ -475,6 +475,39 @@ a.box:hover {
     padding: 5px 60px 5px 12px;
   }
 }
+.page-header {
+  background-color: #fff;
+  background-image: url("../../../base/images/bg.png");
+}
+.media-grid {
+  margin-left: -25px;
+}
+.media-grid .media-item {
+  width: 183px;
+}
+@media (max-width: 767px) {
+  .media-grid {
+    margin-left: -41px;
+    margin-right: -11px;
+    background-image: none;
+    background-color: #fff;
+    border: none;
+  }
+  article.module {
+    border: none;
+  }
+}
+.media-heading {
+  font-family: "PT Sans", "Trebuchet MS", tahoma, sans-serif;
+  font-weight: 400;
+}
+.media-view .banner {
+  font-family: "PT Sans", "Trebuchet MS", tahoma, sans-serif;
+}
+.media-view:hover .banner,
+.media-view.hovered .banner {
+  background-color: #005499;
+}
 [role="main"] .page {
   padding-bottom: 20px;
 }
@@ -485,14 +518,34 @@ a.box:hover {
 .fullwidth.page .module {
   border: none;
 }
+.fullwidth.page .module .page-header {
+  background-color: #fff;
+}
 .fullwidth.page .module-resource .actions {
   right: auto;
   top: auto;
+}
+.fullwidth.page .media-grid {
+  background-image: none;
+  background-color: #fff;
+  border: none;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.fullwidth.page .wide .media-item {
+  width: 194px;
 }
 @media (max-width: 767px) {
   [role="main"] .page {
     margin-left: -21px;
     margin-right: -21px;
+  }
+  .fullwidth.page .wide .media-grid {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  .fullwidth.page .wide .media-grid .media-item {
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -754,10 +807,10 @@ a.box:hover {
   width: 195px;
 }
 @media (max-width: 767px) {
-  .groups.page .primary .module .module-content .media-grid {
+  .media-grid {
     margin-top: 0;
   }
-  .groups.page .primary .module .module-content .media-grid .media-item {
+  .media-grid .media-item {
     width: 100%;
     margin-top: -1px;
     padding-left: 20px;
@@ -767,9 +820,16 @@ a.box:hover {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .groups.page .primary .module .module-content .media-grid .media-item .media-image {
+  .media-grid .media-item .media-image {
     display: none;
   }
+  .groups.page .primary .module .module-content .media-grid .media-item {
+    width: 100%;
+  }
+}
+/* Add */
+.stages {
+  margin-top: -25px;
 }
 /* Footer */
 .site-footer {
