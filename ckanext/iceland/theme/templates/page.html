@@ -30,7 +30,7 @@
             </div>
           {% endblock %}
         </div>
-        <div class="{% block pageclass %}{% endblock %} page">
+        <div class="{% if self.secondary()|trim == '' %}fullwidth{% endif %} {% block pageclass %}{% endblock %} page">
           <div id="content" class="container">
             <div class="row wrapper{% block wrapper_class %}{% endblock %}{% if self.secondary()|trim == '' %} no-nav{% endif %}">
   
