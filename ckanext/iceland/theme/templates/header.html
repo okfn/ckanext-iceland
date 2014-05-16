@@ -1,3 +1,5 @@
+{% set placeholder = placeholder if placeholder else _('What are you looking for?') %}
+
 {% block header_wrapper %}
 {% block header_account %}
   <header class="account-masthead">
@@ -91,7 +93,7 @@
       <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
         <div class="field">
           <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
-          <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('What are you looking for?') }}" />
+          <input id="field-sitewide-search" type="text" name="q" placeholder="{{ placeholder }}" />
           <button class="btn-search" type="submit"><i class="icon-search"></i><span>{{ _('Search') }}</span></button>
         </div>
       </form>
