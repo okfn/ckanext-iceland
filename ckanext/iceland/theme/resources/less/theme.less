@@ -630,22 +630,35 @@ a.box:hover {
   .font-size(26);
   text-transform:uppercase;
   position:relative;
+  margin-top: 80px;
   z-index:0;
   span {
     background-image:url("../../../base/images/bg.png");
     padding:0 20px;
   }
-}
-[role="main"] .strapline:before {
-  background-color:@dark;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  left: 0;
-  top: 18px;
-  right:0;
-  z-index: -1;
+
+  &:before {
+    background-image: url("../../../base/images/opendata-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    display: block;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: -80px;
+  }
+  &:after {
+    background-color:@dark;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 18px;
+    right:0;
+    z-index: -1;
+  }
 }
 @media (max-width: 767px) {
   [role="main"] .strapline {
@@ -659,8 +672,17 @@ a.box:hover {
   text-transform:uppercase;
   .font-size (17);
   color:@medium-text;
-  li:after {
-    content: " > ";
+  li {
+    &.home a {
+      background-image: url("../../../base/images/opendata-logo-small.png");
+      background-repeat: no-repeat;
+      background-position: center top;
+      display: inline-block;
+      padding-top: 35px;
+    }
+    &:after {
+      content: " > ";
+    }
   }
   a {
     color:@medium-text;
