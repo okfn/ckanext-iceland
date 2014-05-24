@@ -9,7 +9,7 @@
       <hgroup class="{{ g.header_class }}">
         {% block header_logo %}
           {% if g.site_logo %}
-            <a class="logo" href="{{ h.url('home') }}">
+            <a class="logo" href="https://island.is/">
               <img src="{{ h.url_for_static(g.site_logo) }}" alt="{{ g.site_title }} Logo" title="{{ g.site_title }} Logo" />
               {% if g.site_description %}<h2 class="strapline">{{ g.site_description }}</h2>{% endif %}
             </a>
