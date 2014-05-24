@@ -33,6 +33,10 @@ select,
 textarea {
   font-family: 'PT Serif', Georgia, Times, "Times New Roman", serif;
 }
+div.input-prepend {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
 textarea,
 input[type="text"],
 input[type="password"],
