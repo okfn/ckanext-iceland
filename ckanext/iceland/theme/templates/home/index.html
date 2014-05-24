@@ -29,13 +29,6 @@
               <a class="box" href="/about">{{ _('About') }}</a>
             </div>
           </div>
-          <div class="row">
-            {% for tag in tags %}
-            <div class="span3">
-              <a class="box" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a>
-            </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
     {% endblock %}
