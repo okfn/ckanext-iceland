@@ -881,51 +881,94 @@ a.box:hover {
     margin-right: 20px;
   }
 }
-div.footer p {
-  padding-left: 66px;
-}
-div.footer p.contact {
-  background-image: url("../../../base/images/thjodskra-logo.png");
-  background-repeat: no-repeat;
-  background-position: left center;
-  line-height: 48px;
-}
-div.footer p.contact i {
-  display: inline-block;
-  font-style: normal;
-  margin-left: 0.28em;
-  overflow: hidden;
-  vertical-align: top;
-  white-space: nowrap;
-  width: 1em;
-}
-div.footer p.contact i:before {
-  content: "|";
-  display: inline-block;
-  margin-right: 2px;
-  text-align: center;
-  text-shadow: -1px 0 #c2c2c1;
-  width: 100%;
-}
-div.footer p ul.text-right {
-  text-align: right;
-}
-div.footer div.facebook {
-  height: 48px;
-  line-height: 48px;
-}
-div.footer div.facebook a {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
+div.facebook a {
   color: #3B5998;
 }
-div.footer div.facebook a:hover {
+div.facebook a:hover {
   text-decoration: none;
 }
-div.footer div.facebook a i {
+div.facebook a i {
   font-size: 32px;
   font-size: 3.2rem;
+}
+@media (max-width: 767px) {
+  div.footer p.contact {
+    padding-left: 58px;
+    min-height: 48px;
+    background-image: url("../../../base/images/thjodskra-logo.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+  div.footer p.contact > i {
+    display: none;
+  }
+  div.footer p.contact span.addr,
+  div.footer p.contact span.tel,
+  div.footer p.contact span.email {
+    display: block;
+  }
+  div.footer div.facebook {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+  }
+  div.footer ul.ckan {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  div.footer p {
+    padding-left: 66px;
+  }
+  div.footer p.contact {
+    margin-top: 15px;
+  }
+  div.footer p.contact:before {
+    background-image: url("../../../base/images/thjodskra-logo.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    height: 48px;
+    width: 48px;
+  }
+  div.footer p.contact span.addr,
+  div.footer p.contact span.tel,
+  div.footer p.contact span.email {
+    white-space: nowrap;
+  }
+  div.footer p.contact i {
+    display: inline-block;
+    font-style: normal;
+    margin-left: 0.28em;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 1em;
+  }
+  div.footer p.contact i:before {
+    content: "|";
+    display: inline-block;
+    margin-right: 2px;
+    text-align: center;
+    text-shadow: -1px 0 #c2c2c1;
+    width: 100%;
+  }
+  div.footer div.facebook {
+    text-align: right;
+    line-height: 48px;
+  }
+  div.footer div.facebook a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+  div.footer ul.ckan {
+    text-align: right;
+  }
 }
 /* IE8 Hacks */
 html.ie .account-masthead hgroup {

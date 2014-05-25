@@ -973,56 +973,104 @@ a.box:hover {
   }
 }
 
-div.footer {
-  p {
-    padding-left: 66px;
-    &.contact {
+div.facebook {
+  a {
+    color: #3B5998;
+    &:hover {
+      text-decoration: none;
+    }
+
+    i {    
+      .font-size(32);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  div.footer {
+    p.contact {
+      padding-left: 58px;
+      min-height: 48px;
+
       background-image: url("../../../base/images/thjodskra-logo.png");
       background-repeat: no-repeat;
-      background-position: left center;
-      line-height: 48px;
+      background-position: left top;
 
-      i {
-        display: inline-block;
-        font-style: normal;
-        margin-left: 0.28em;
-        overflow: hidden;
-        vertical-align: top;
-        white-space: nowrap;
-        width: 1em;
+            &> i {
+        display: none;
+      }
+      span.addr, span.tel, span.email {
+        display: block;
+      }
+    }
 
+    div.facebook {
+      padding: 10px 0;
+      display: block;
+      text-align: center;
+    }
+
+    ul.ckan {
+      text-align: center;
+    }
+  }
+}
+@media (min-width: 768px) {
+  div.footer {
+    p {
+      padding-left: 66px;
+      &.contact {
+        margin-top: 32-17px;
         &:before {
-          content: "|";
+          background-image: url("../../../base/images/thjodskra-logo.png");
+          background-repeat: no-repeat;
+          background-position: left center;
+          content: "";
+          display: block;
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          height: 48px;
+          width: 48px;
+        }
+
+        span.addr, span.tel, span.email {
+          white-space: nowrap;
+        }
+
+        i {
           display: inline-block;
-          margin-right: 2px;
-          text-align: center;
-          text-shadow: -1px 0 #C2C2C1;
-          width: 100%;
+          font-style: normal;
+          margin-left: 0.28em;
+          overflow: hidden;
+          vertical-align: top;
+          white-space: nowrap;
+          width: 1em;
+
+          &:before {
+            content: "|";
+            display: inline-block;
+            margin-right: 2px;
+            text-align: center;
+            text-shadow: -1px 0 #C2C2C1;
+            width: 100%;
+          }
         }
       }
     }
 
-    ul.text-right {
+    div.facebook {
       text-align: right;
+      line-height: 48px;
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+      }
     }
-  }
 
-  div.facebook {
-    height: 48px;
-    line-height: 48px;
-    a {
-      display: inline-block;
-      vertical-align: middle;
-      line-height: normal;  
-      color: #3B5998;
-
-      &:hover {
-        text-decoration: none;
-      }
-
-      i {    
-        .font-size(32);
-      }
+    ul.ckan {
+      text-align: right;
     }
   }
 }
