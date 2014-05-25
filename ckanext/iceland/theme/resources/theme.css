@@ -858,6 +858,7 @@ a.box:hover {
   background-color: #f8f8f7;
   color: #818181;
   border-top: solid 1px #e3e3e3;
+  font-family: "PT Sans", "Trebuchet MS", tahoma, sans-serif;
 }
 .site-footer a {
   color: #818181;
@@ -879,6 +880,52 @@ a.box:hover {
     margin-left: 20px;
     margin-right: 20px;
   }
+}
+div.footer p {
+  padding-left: 66px;
+}
+div.footer p.contact {
+  background-image: url("../../../base/images/thjodskra-logo.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 48px;
+}
+div.footer p.contact i {
+  display: inline-block;
+  font-style: normal;
+  margin-left: 0.28em;
+  overflow: hidden;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1em;
+}
+div.footer p.contact i:before {
+  content: "|";
+  display: inline-block;
+  margin-right: 2px;
+  text-align: center;
+  text-shadow: -1px 0 #c2c2c1;
+  width: 100%;
+}
+div.footer p ul.text-right {
+  text-align: right;
+}
+div.footer div.facebook {
+  height: 48px;
+  line-height: 48px;
+}
+div.footer div.facebook a {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  color: #3B5998;
+}
+div.footer div.facebook a:hover {
+  text-decoration: none;
+}
+div.footer div.facebook a i {
+  font-size: 32px;
+  font-size: 3.2rem;
 }
 /* IE8 Hacks */
 html.ie .account-masthead hgroup {

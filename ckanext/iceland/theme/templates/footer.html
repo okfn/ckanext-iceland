@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer" role="contentinfo">
+      <div class="row">
+        <div class="span11">
+          <p class="contact">
+            <strong>
+              <a href="https://www.skra.is">Þjóðskrá Íslands</a>
+            </strong>
+            <i>,</i>
+            <span class="addr">
+              Borgartúni 21
+              <i>,</i>
+              105 Reykjavík
+            </span>
+            <i>,</i>
+            <span class="tel">
+              Sími
+              <a href="tel:+3545155300">515 5300</a>
+            </span>
+            <i>,</i>
+            <span class="email">
+              Netfang
+              <a href="mailto:island@island.is">island@island.is</a>
+            </span>
+          </p>
+        </div>
+        <div class="span1">
+          <div class="facebook pull-right">
+            <a title="Ísland.is á Facebook" href="https://www.facebook.com/islandid">
+              <i class="icon-facebook-sign"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span7">
+          <p>
+            <strong>Fyrirvari:</strong><br/>
+            Leitast verður við að hafa réttar upplýsingar á vef island.is
+en ekki er unnt að ábyrgjast að það sé ávallt svo.
+          </p>
+        </div>
+        <div class="span5">
+          <ul class="unstyled text-right">
+            <li>
+              <a href="{{ h.url_for(controller='home', action='about') }}">
+                <strong>{{ _('About {0}').format(g.site_title) }}?</strong>
+              </a>
+            </li>
+            <li><a href="http://www.opendefinition.org/okd/"><img src="//assets.okfn.org/images/ok_buttons/od_80x15_blue.png"></a></li>
+            <li>{% trans %}<strong>Powered by <a href="http://ckan.org">CKAN</a></strong>{% endtrans %}</li>
+            {% set api_url = 'http://docs.ckan.org/en/{0}/api.html'.format(g.ckan_doc_version) %}
+            <li><a href="{{ api_url }}">{{ _('CKAN API') }}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
