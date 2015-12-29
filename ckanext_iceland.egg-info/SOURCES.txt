@@ -8,4 +8,5 @@ ckanext_iceland.egg-info/dependency_links.txt
 ckanext_iceland.egg-info/entry_points.txt
 ckanext_iceland.egg-info/namespace_packages.txt
 ckanext_iceland.egg-info/not-zip-safe
+ckanext_iceland.egg-info/pbr.json
 ckanext_iceland.egg-info/top_level.txt
