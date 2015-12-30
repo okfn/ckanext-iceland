@@ -5,6 +5,8 @@ from ckan.lib.plugins import DefaultTranslation
 class ModernusException(Exception):
     pass
 
+class SiteimproveException(Exception):
+    pass
 
 class IcelandPlugin(plugins.SingletonPlugin, DefaultTranslation):
     '''Iceland theme plugin.
@@ -39,6 +41,7 @@ class IcelandPlugin(plugins.SingletonPlugin, DefaultTranslation):
         # plugin.py file.
         toolkit.add_template_directory(config, 'theme/templates')
         toolkit.add_template_directory(config, 'modernus/templates')
+        toolkit.add_template_directory(config, 'siteimprove/templates')
         
         # Add this plugin's public dir to CKAN's extra_public_paths, so
         # that CKAN will use this plugin's custom static files.
@@ -59,6 +62,11 @@ class IcelandPlugin(plugins.SingletonPlugin, DefaultTranslation):
         return toolkit.render_snippet(
             'modernus/snippets/counter.html',data)
 
+    def render_siteimprove(self):
+        return toolkit.render_snippet(
+            'siteimprove/snippets/tracker.html')
+    
     def get_helpers(self):
-        return {'modernus_counter': self.render_modernus}
+        return {'modernus_counter': self.render_modernus,
+                'siteimprove_tracker': self.render_siteimprove}
         
