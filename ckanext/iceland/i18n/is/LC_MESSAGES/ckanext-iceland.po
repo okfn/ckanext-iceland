@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-iceland 0.1\n"
 "Report-Msgid-Bugs-To: tryggvib@fsfi.is\n"
-"POT-Creation-Date: 2015-12-29 12:01+0000\n"
-"PO-Revision-Date: 2015-12-29 12:01+0000\n"
+"POT-Creation-Date: 2015-12-30 13:03+0000\n"
+"PO-Revision-Date: 2015-12-30 13:05+0000\n"
 "Last-Translator: Tryggvi Björgvinsson <tryggvib@fsfi.is>\n"
 "Language: is\n"
 "Language-Team: Icelandic <>\n"
@@ -119,6 +119,22 @@ msgstr "Það er engar stofnanir á þessari síðu"
 #: ckanext/iceland/theme/templates/organization/index.html:29
 msgid "Search organizations..."
 msgstr "Leita í stofnunum..."
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:6
+msgid "License"
+msgstr "Leiðbeiningar um endurnot"
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:17
+msgid "Default value describes public sector reuse by law."
+msgstr "Sjálgefið gildi lýsir endurnotum samkvæmt lögum."
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:20
+msgid ""
+"International license information can be found at <a href=\"http://"
+"opendefinition.org/licenses/\">opendefinition.org</a>"
+msgstr ""
+"Umfjöllun um alþjóðlega leyfisskilmála er á <a href=\"http://opendefinition."
+"org/licenses/\">opendefinition.org</a>"
 
 #~ msgid "About"
 #~ msgstr "Um"

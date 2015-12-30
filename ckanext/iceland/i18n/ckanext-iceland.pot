@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-iceland 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2015-12-29 12:01+0000\n"
+"POT-Creation-Date: 2015-12-30 13:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,5 +114,19 @@ msgstr ""
 
 #: ckanext/iceland/theme/templates/organization/index.html:29
 msgid "Search organizations..."
+msgstr ""
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:6
+msgid "License"
+msgstr ""
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:17
+msgid "Default value describes public sector reuse by law."
+msgstr ""
+
+#: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:20
+msgid ""
+"International license information can be found at <a "
+"href=\"http://opendefinition.org/licenses/\">opendefinition.org</a>"
 msgstr ""
 
