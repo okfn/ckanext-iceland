@@ -17,16 +17,16 @@
           {% if g.site_description %}<h2 class="strapline"><span>{{ g.site_description }}</span></h2>{% endif %}
           <div class="row">
             <div class="span3">
-              <a class="box" href="/dataset">{{ _('Datasets') }}</a>
+              <a class="box" href="{{ h.url_for('dataset') }}">{{ _('Datasets') }}</a>
             </div>
             <div class="span3">
-              <a class="box" href="/organization">{{ _('Organizations') }}</a>
+              <a class="box" href="{{ h.url_for('organization') }}">{{ _('Organizations') }}</a>
             </div>
             <div class="span3">
-              <a class="box" href="/group">{{ _('Groups') }}</a>
+              <a class="box" href="{{ h.url_for('group') }}">{{ _('Groups') }}</a>
             </div>
             <div class="span3">
-              <a class="box" href="/pages">{{ _('Pages') }}</a>
+              <a class="box" href="{{ h.url_for('pages') }}">{{ _('Pages') }}</a>
             </div>
           </div>
         </div>
