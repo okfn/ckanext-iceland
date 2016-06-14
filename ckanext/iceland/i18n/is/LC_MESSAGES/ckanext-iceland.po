@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: ckanext-iceland 0.1\n"
 "Report-Msgid-Bugs-To: tryggvib@fsfi.is\n"
 "POT-Creation-Date: 2015-12-30 13:03+0000\n"
-"PO-Revision-Date: 2015-12-30 13:05+0000\n"
+"PO-Revision-Date: 2015-12-30 13:30+0000\n"
 "Last-Translator: Tryggvi Björgvinsson <tryggvib@fsfi.is>\n"
 "Language: is\n"
 "Language-Team: Icelandic <>\n"
@@ -122,7 +122,7 @@ msgstr "Leita í stofnunum..."
 
 #: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:6
 msgid "License"
-msgstr "Leiðbeiningar um endurnot"
+msgstr "Endurnot"
 
 #: ckanext/iceland/theme/templates/package/snippets/package_basic_fields.html:17
 msgid "Default value describes public sector reuse by law."
